@@ -76,13 +76,13 @@ test('memoized selectors', () => {
     Object.values(st.data).map(d => d.y)
   );
   
-  expect(fn1(stateA) === fn1(stateB)).toBeTruthy();
-  expect(fn1(stateA) === fn1(stateC)).toBeTruthy();
-  expect(fn1(stateB) !== fn1(stateC)).toBeTruthy();
+  expect(fn1(stateA) === fn1(stateB)).toBeTruthy();  //pass function return true
+  expect(fn1(stateA) === fn1(stateC)).toBeTruthy(); //pass function return true
+  expect(fn1(stateB) !== fn1(stateC)).toBeTruthy(); //pass function retur true
   
-  expect(fn2(stateA) === fn2(stateA)).toBeTruthy();
-  expect(fn2(stateA) === fn2(stateB)).toBeTruthy();
-  expect(fn2(stateA) !== fn2(stateC)).toBeTruthy();
-  expect(fn2(stateB) !== fn2(stateC)).toBeTruthy();
+  expect(fn2(stateA) === fn2(stateA)).toBeTruthy(); //pass function return true
+  expect(fn2(stateA) === fn2(stateB)).toBeTruthy(); //pass function return true
+  expect(fn2(stateA) !== fn2(stateC)).toBeTruthy(); //pass function return true
+  expect(fn2(stateB) !== fn2(stateC)).toBeTruthy(); //pass function return true
 });
 ```
